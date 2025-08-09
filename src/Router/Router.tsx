@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 
-import MainLayout from "../Layouts/MainLayout";
+import MainLayout from "../components/Layouts/MainLayout";
 
 import OurBooks from "../pages/OurBooks/OurBooks";
 import MyBorrowedBooks from "../pages/MyBorrowedBooks/MyBorrowedBooks";

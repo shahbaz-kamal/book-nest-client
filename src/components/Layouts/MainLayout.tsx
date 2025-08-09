@@ -1,12 +1,13 @@
-import Navbar from "../pages/Shared/Navbar/Navbar";
+
 import { Outlet } from "react-router";
-import Footer from "../pages/Shared/Footer/Footer";
+import Navbar from "../Shared/Navbar/Navbar";
+import Footer from "../Shared/Footer/Footer";
+
 
 const MainLayout = () => {
   return (
     <div>
-      I am Main Layout
-      <header>
+      <header className="w-full ">
         <Navbar></Navbar>
       </header>
       <main>
