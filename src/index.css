@@ -11,7 +11,7 @@
   --color-text: var(--text);
 }
 
-:root {
+/* :root {
   --background: #fdf9f5;
   --primary: #d78b3a;
   --secondary: #e7e995;
@@ -25,13 +25,25 @@
   --secondary: #603a3e;
   --accent: #a6a06c;
   --text: #e8f1f0;
+} */
+:root {
+  --background: #faf6f1;
+  --primary: #d97a3e;
+  --secondary: #f2c572;
+  --accent: #7fb77e;
+  --text: #1c1a16;
+}
+
+.dark {
+  --background: #121212;
+  --primary: #f0a35e;
+  --secondary: #b88a4a;
+  --accent: #94c9a9;
+  --text: #f1f1f1;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-text;
   }
 }

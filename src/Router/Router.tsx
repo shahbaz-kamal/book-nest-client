@@ -2,9 +2,9 @@ import { createBrowserRouter } from "react-router";
 
 import MainLayout from "../components/Layouts/MainLayout";
 
-import OurBooks from "../pages/OurBooks/OurBooks";
-import MyBorrowedBooks from "../pages/MyBorrowedBooks/MyBorrowedBooks";
 import Home from "../pages/Home/Home";
+import AllBooks from "../pages/AllBooks/AllBooks";
+import AddBook from "../pages/AddBook/AddBook";
 
 export const router = createBrowserRouter([
   {
@@ -15,10 +15,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      { path: "/our-books", element: <OurBooks></OurBooks> },
+      { path: "/all-books", element: <AllBooks></AllBooks> },
       {
-        path: "my-borrowed-books",
-        element: <MyBorrowedBooks></MyBorrowedBooks>,
+        path: "/add-book",
+        element: <AddBook></AddBook>,
       },
     ],
   },
