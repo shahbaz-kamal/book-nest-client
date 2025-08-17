@@ -1,12 +1,27 @@
 import { NavLink } from "react-router";
 import logo from "../../../assets/logo3.png";
 
-import { useAppSelector } from "../../../redux/hooks";
 import { navLinks } from "../../../constants";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Navbar = () => {
-  const {value}=useAppSelector(state=>state.book)
-  console.log(value)
+  useGSAP(() => {
+    gsap.from("#logo", {
+      scale: 0.9,
+      duration: 1,
+      ease: "power1.inOut",
+      delay: 0.5,
+    });
+    gsap.from(".navlink ul li", {
+      opacity: 0,
+      y: -20,
+      duration: 1,
+      ease: "power2.out",
+      stagger: 0.1,
+      delay: 0.5,
+    });
+  }, []);
   const links = (
     <>
       {navLinks.map((link) => (
@@ -14,12 +29,13 @@ const Navbar = () => {
           <NavLink
             to={link.route}
             className={({ isActive }) =>
-              `px-3 py-1 transition duration-300 ease-in-out ${
+              `px-3 py-1 transition  duration-300 ease-in-out hover:underline ${
                 isActive ? "bg-primary font-semibold" : "text-text"
               }`
             }
           >
             {link.name}
+            <span className="absolute left-0 bottom-0 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
           </NavLink>
         </li>
       ))}
@@ -31,17 +47,16 @@ const Navbar = () => {
       {/* navbar starts */}
       <div className="flex  items-center justify-center gap-2">
         <div>
-          {" "}
-          <img src={logo} alt="" className="w-12 h-12" />
+          <img id="logo" src={logo} alt="" className="w-12 h-12" />
         </div>
         <a href="/" className="font-semibold">
-          Book<span className="text-accent font-bold">NEST</span>
+          Book<span className="text-primary font-bold">NEST</span>
         </a>
       </div>
       {/* navbaer-ends */}
       <div>
         {/* navlinks */}
-        <div>
+        <div className="navlink">
           <ul className="flex ">{links}</ul>
         </div>
         {/* end section */}
