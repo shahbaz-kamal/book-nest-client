@@ -1,8 +1,12 @@
+import Hero from "./Hero";
+
 const Home = () => {
   return (
-    <div className="">
+    <div className="space-y-4 md:space-y-5">
       <title>Home || BookNest</title>
-      <div>I am home</div>
+      <section>
+        <Hero></Hero>
+      </section>
       <div className="h-[100vh] bg-red-500"> </div>
     </div>
   );

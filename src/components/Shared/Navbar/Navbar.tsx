@@ -49,7 +49,7 @@ const Navbar = () => {
         <div>
           <img id="logo" src={logo} alt="" className="w-12 h-12" />
         </div>
-        <a href="/" className="font-semibold">
+        <a href="/" className="font-bold">
           Book<span className="text-primary font-bold">NEST</span>
         </a>
       </div>

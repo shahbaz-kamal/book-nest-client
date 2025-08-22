@@ -1,7 +1,51 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { RootState } from "../../store";
 
-const initialState = { value: 0 };
+const initialState = {
+  value: 0,
+  heroData: [
+    {
+      _id: "689b58c705dd8a83c7023f27",
+      title: "The Martian",
+      author: "Andy Weir",
+      genre: "SCIENCE",
+      isbn: "978-0553418026",
+      description: "An astronaut stranded on Mars fights to survive",
+      price: 15.25,
+      coverPage: "https://i.ibb.co.com/TBjb2P97/18007564.jpg",
+      showInHeroSection: true,
+      copies: 10,
+      available: true,
+    },
+    {
+      _id: "689b58c705dd8a83c7023f24",
+      title: "The Hobbit",
+      author: "J.R.R. Tolkien",
+      genre: "FANTASY",
+      isbn: "978-0547928227",
+      description:
+        "A hobbit named Bilbo Baggins embarks on an epic quest to win a share of a dragon's treasure.",
+      price: 14.99,
+      coverPage:
+        "https://i.ibb.co.com/gZBxwCL4/The-Hobbit-Book-Cover-Minimalistic-Mountains.png",
+      showInHeroSection: true,
+      copies: 12,
+      available: true,
+    },
+    {
+      _id: "689b58c705dd8a83c7023f26",
+      title: "Sapiens",
+      author: "Yuval Noah Harari",
+      genre: "HISTORY",
+      isbn: "978-0062316097",
+      description: "A brief history of humankind",
+      price: 16.5,
+      coverPage: "https://i.ibb.co.com/7NW8FM34/23692271.jpg",
+      showInHeroSection: true,
+      copies: 15,
+      available: true,
+    },
+  ],
+};
 
 export const bookSlice = createSlice({
   name: "book",
@@ -9,6 +53,6 @@ export const bookSlice = createSlice({
   reducers: {},
 });
 
-export const selectBook = (state: RootState) => state.book.value
+// export const selectBook = (state: RootState) => state.book.value;
 
-export default bookSlice.reducer
+export default bookSlice.reducer;
