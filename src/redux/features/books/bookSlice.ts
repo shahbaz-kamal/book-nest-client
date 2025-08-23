@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { Book, InitialState } from "../../../types/books";
 
-const initialState = {
+
+const initialState: InitialState = {
   value: 0,
   heroData: [
     {
@@ -50,9 +52,21 @@ const initialState = {
 export const bookSlice = createSlice({
   name: "book",
   initialState,
-  reducers: {},
+  reducers: {
+    setHeroData: (state, action) => {
+      const { allHeroData } = action.payload;
+      const filteredData: Book[] | [] = allHeroData.filter(
+        (singleData: Book) => singleData.showInHeroSection === true
+      );
+      if (filteredData.length > 1) {
+        state.heroData = filteredData;
+      }
+    },
+  },
 });
 
 // export const selectBook = (state: RootState) => state.book.value;
 
 export default bookSlice.reducer;
+
+export const { setHeroData } = bookSlice.actions;
