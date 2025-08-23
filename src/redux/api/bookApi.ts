@@ -8,16 +8,17 @@ export const bookApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: baseBackanedUrl,
   }),
-  tagTypes: ["book"],
+  tagTypes: ["books"],
   endpoints: (builder) => ({
     addBook: builder.mutation({
       query: (body) => ({ url: "api/books", method: "POST", body }),
-      //   providesTags: ["book"],
+      invalidatesTags: ["books"],
     }),
-    // getAllBook:builder.query({
-    //     query:()
-    // })
+    getAllBook: builder.query({
+      query: () => "api/books",
+      providesTags: ["books"],
+    }),
   }),
 });
 
-export const { useAddBookMutation } = bookApi;
+export const { useAddBookMutation, useGetAllBookQuery } = bookApi;
