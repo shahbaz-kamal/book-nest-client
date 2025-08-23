@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="space-y-4 md:space-y-5">
       <title>Home || BookNest</title>
-      <section>
+      <section className="w-11/12 md:w-10/12 mx-auto">
         <Hero></Hero>
       </section>
       <div className="h-[100vh] bg-red-500"> </div>
