@@ -13,4 +13,7 @@ export const navLinks: Navlink[] = [
   { id: 2, route: "/all-books", name: "All Books", icon: BookOpen },
   { id: 3, route: "/add-book", name: "Add Book", icon: BookDown },
 ];
+
+
+
 export const serverLink: string = "http://localhost:5000/";

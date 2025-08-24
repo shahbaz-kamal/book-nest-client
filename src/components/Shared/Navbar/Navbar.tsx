@@ -22,6 +22,13 @@ const Navbar = () => {
       stagger: 0.1,
       delay: 0.5,
     });
+    gsap.from(".theme-toggler-button", {
+      opacity: 0,
+      y: -20,
+      duration: 0.5,
+      ease: "power2.out",
+      delay: 1,
+    });
   }, []);
   const links = (
     <>
@@ -30,9 +37,9 @@ const Navbar = () => {
           <NavLink
             to={link.route}
             className={({ isActive }) =>
-              `px-3 py-1 transition  duration-300 ease-in-out hover:underline ${
+              `px-3 py-[6px] transition  duration-300 ease-in-out hover:underline ${
                 isActive
-                  ? "bg-light-primary dark:bg-dark-primary font-semibold text-dark-text"
+                  ? "bg-light-primary dark:bg-dark-primary font-semibold text-dark-text dark:text-light-text"
                   : "text-light-text dark:text-dark-text"
               }`
             }
@@ -52,8 +59,11 @@ const Navbar = () => {
         <div>
           <img id="logo" src={logo} alt="" className="w-12 h-12" />
         </div>
-        <a href="/" className="font-bold">
-          Book<span className="text-primary font-bold">NEST</span>
+        <a href="/" className="font-bold text-light-text dark:text-dark-text">
+          Book
+          <span className="text-light-primary dark:text-dark-primary font-extrabold">
+            NEST
+          </span>
         </a>
       </div>
       {/* navbaer-ends */}
@@ -65,7 +75,7 @@ const Navbar = () => {
         {/* end section */}
         <div>
           {/* dark toggle */}
-          <div>
+          <div className="theme-toggler-button">
             <ThemeToggle></ThemeToggle>
           </div>
         </div>

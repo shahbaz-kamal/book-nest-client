@@ -12,24 +12,43 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-light-background: #faf6f1;
-  /* --color-light-primary: #d97a3e;
+  /* --color-light-background: #faf6f1;
+  --color-light-primary: #d97a3e;
   --color-light-secondary: #f2c572;
   --color-light-accent: #7fb77e;
   --color-light-text: #1c1a16; */
-  --color-light-primary: #1A2A80;    
+  --color-light-background: #faf6f1; /* fixed background */
+  --color-light-text: #1c1a16;       /* fixed text */
+
+  --color-light-primary: #2563eb;   /* deep blue */
+  --color-light-secondary: #16a34a; /* library green */
+  --color-light-accent: #facc15;    /* gold for highlights */
+  --color-light-muted: #94a3b8;     /* gray for borders/text */
+
+
+  /* --color-light-primary: #1A2A80;    
 --color-light-secondary: #3B38A0; 
 --color-light-accent: #7A85C1;     
---color-light-text: #1c1a16; 
+--color-light-text: #1c1a16;  */
   /* ===== DARK THEME ===== */
 
+  /* --color-dark-background: #121212; 
+  --color-dark-primary: #f0a35e; 
+  --color-dark-secondary: #b88a4a; 
+  --color-dark-accent: #94c9a9; 
+  --color-dark-text: #f1f1f1;  */
 
-  
-  --color-dark-background: #121212; /* Dark background */
-  --color-dark-primary: #f0a35e; /* Dark navbar, primary buttons */
-  --color-dark-secondary: #b88a4a; /* Subtle UI in dark mode */
-  --color-dark-accent: #94c9a9; /* Action highlights in dark mode */
-  --color-dark-text: #f1f1f1; /* Dark mode text */
+  /* --color-dark-background: #121212;
+  --color-dark-primary: #d97a3e;
+  --color-dark-secondary: #f2c572;
+  --color-dark-accent: #7fb77e;
+  --color-dark-text: #f1f1f1; */
+
+  --color-dark-background: #121212;
+  --color-dark-primary: #d97a3e;
+  --color-dark-secondary: #f2c572;
+  --color-dark-accent: #7fb77e;
+  --color-dark-text: #f1f1f1;
 }
 
 /* @layer base {
