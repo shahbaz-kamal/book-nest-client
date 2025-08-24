@@ -4,6 +4,7 @@ import logo from "../../../assets/logo3.png";
 import { navLinks } from "../../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   useGSAP(() => {
@@ -30,7 +31,9 @@ const Navbar = () => {
             to={link.route}
             className={({ isActive }) =>
               `px-3 py-1 transition  duration-300 ease-in-out hover:underline ${
-                isActive ? "bg-primary font-semibold" : "text-text"
+                isActive
+                  ? "bg-light-primary dark:bg-dark-primary font-semibold text-dark-text"
+                  : "text-light-text dark:text-dark-text"
               }`
             }
           >
@@ -54,13 +57,18 @@ const Navbar = () => {
         </a>
       </div>
       {/* navbaer-ends */}
-      <div>
+      <div className="flex items-center gap-4">
         {/* navlinks */}
         <div className="navlink">
           <ul className="flex ">{links}</ul>
         </div>
         {/* end section */}
-        <div></div>
+        <div>
+          {/* dark toggle */}
+          <div>
+            <ThemeToggle></ThemeToggle>
+          </div>
+        </div>
       </div>
     </div>
   );

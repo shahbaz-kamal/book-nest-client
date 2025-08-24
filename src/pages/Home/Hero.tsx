@@ -19,19 +19,24 @@ const Hero = () => {
   console.log(heroData);
 
   return (
-    <div className="flex justify-between items-center">
-      <div>
-        <ArrowBigLeft />
-      </div>
-      <div className="flex ">
-        <img className="max-h-80" src={heroData[0].coverPage} alt="" />
+    <div>
+      
+      <div className="flex justify-between items-center">
         <div>
-          <h3>{heroData[0].title}</h3>
-          <h3 className="max-w-[400px]">{heroData[0].description}</h3>
+          <ArrowBigLeft />
         </div>
-      </div>
-      <div>
-        <ArrowBigRight />
+        <div className="flex ">
+          <div className="flex">
+            <img className="max-h-80" src={heroData[0].coverPage} alt="" />
+            <div>
+              <h3>{heroData[0].title}</h3>
+              <h3 className="max-w-[400px]">{heroData[0].description}</h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ArrowBigRight />
+        </div>
       </div>
     </div>
   );

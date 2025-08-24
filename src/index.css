@@ -8,52 +8,35 @@
 .font-common {
   font-family: "Merriweather", serif;
 }
-@custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-text: var(--text);
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-light-background: #faf6f1;
+  /* --color-light-primary: #d97a3e;
+  --color-light-secondary: #f2c572;
+  --color-light-accent: #7fb77e;
+  --color-light-text: #1c1a16; */
+  --color-light-primary: #1A2A80;    
+--color-light-secondary: #3B38A0; 
+--color-light-accent: #7A85C1;     
+--color-light-text: #1c1a16; 
+  /* ===== DARK THEME ===== */
+
+
+  
+  --color-dark-background: #121212; /* Dark background */
+  --color-dark-primary: #f0a35e; /* Dark navbar, primary buttons */
+  --color-dark-secondary: #b88a4a; /* Subtle UI in dark mode */
+  --color-dark-accent: #94c9a9; /* Action highlights in dark mode */
+  --color-dark-text: #f1f1f1; /* Dark mode text */
 }
 
-/* :root {
-  --background: #fdf9f5;
-  --primary: #d78b3a;
-  --secondary: #e7e995;
-  --accent: #c2e068;
-  --text: #120c04;
-}
-
-.dark {
-  --background: #091b1a;
-  --primary: #a0c5c4;
-  --secondary: #603a3e;
-  --accent: #a6a06c;
-  --text: #e8f1f0;
-} */
-:root {
-  --background: #faf6f1;
-  --primary: #d97a3e;
-  --secondary: #f2c572;
-  --accent: #7fb77e;
-  --text: #1c1a16;
-}
-
-.dark {
-  --background: #121212;
-  --primary: #f0a35e;
-  --secondary: #b88a4a;
-  --accent: #94c9a9;
-  --text: #f1f1f1;
-}
-
-@layer base {
+/* @layer base {
   body {
     @apply bg-background text-text;
   }
-}
+} */
 
 @utility flex-center {
   @apply flex justify-center items-center;
