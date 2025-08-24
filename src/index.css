@@ -8,6 +8,14 @@
 .font-common {
   font-family: "Merriweather", serif;
 }
+/* background image for hero */
+.hero{
+  background-image: url("/src/assets/banner_image_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; 
+}
 
 @custom-variant dark (&:where(.dark, .dark *));
 

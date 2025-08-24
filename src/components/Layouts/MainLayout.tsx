@@ -46,10 +46,10 @@ const MainLayout = () => {
   }, [isDark]);
   return (
     <div>
-      <header className="w-full fixed z-30 bg-light-background/60 dark:bg-dark-background/60  backdrop-blur-2xl">
+      <header className="w-full fixed z-30 bg-light-background/60 dark:bg-dark-background/60  backdrop-blur-2xl ">
         <Navbar></Navbar>
       </header>
-      <main className="pt-20">
+      <main className="pt-16">
         <Outlet></Outlet>
       </main>
       <footer>
