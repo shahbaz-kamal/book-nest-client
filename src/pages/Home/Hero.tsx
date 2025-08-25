@@ -20,8 +20,8 @@ const Hero = () => {
       dispatch(setHeroData({ allHeroData: data.data }));
     }
   }, [data]);
-  console.log(data);
-  console.log(heroData);
+  // console.log(data);
+  // console.log(heroData);
   const totalData: number = heroData.length;
   const goToSlides = (index: number) => {
     const newIndex = (index + totalData) % totalData;

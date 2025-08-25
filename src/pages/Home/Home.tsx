@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import OurBooks from "./OurBooks";
 
 const Home = () => {
   return (
@@ -8,6 +9,9 @@ const Home = () => {
         <div className="w-11/12 md:w-10/12 mx-auto">
           <Hero></Hero>
         </div>
+      </section>
+      <section>
+        <OurBooks></OurBooks>
       </section>
       <div className="h-[100vh] bg-red-500"> </div>
     </div>

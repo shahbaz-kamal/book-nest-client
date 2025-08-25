@@ -15,4 +15,5 @@ export interface Book {
 export interface InitialState {
   value: number;
   heroData: Book[];
+  allBookData: Book[];
 }
