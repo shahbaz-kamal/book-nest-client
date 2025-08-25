@@ -80,11 +80,11 @@ const Hero = () => {
           </span>
           <ArrowBigLeft size={30} />
           {/* Hover Image */}
-          <img
+          {/* <img
             src={prevBook.coverPage}
             alt={prevBook.title}
             className="hidden md:absolute md:block -top-[250px] left-0 max-w-[150px]   opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          />
+          /> */}
         </div>
 
         <div className="flex flex-col-reverse lg:flex-row gap-16 items-center  md:justify-evenly w-full">
@@ -136,11 +136,11 @@ const Hero = () => {
           </span>
           <ArrowBigRight size={30} />
           {/* Hover Image */}
-          <img
+          {/* <img
             src={nextBook.coverPage}
             alt={prevBook.title}
             className="hidden md:absolute md:block -top-[250px] right-0 max-w-[150px]   opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          />
+          /> */}
         </div>
       </div>
     </div>

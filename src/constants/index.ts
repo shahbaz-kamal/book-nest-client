@@ -12,6 +12,7 @@ export const navLinks: Navlink[] = [
   { id: 1, route: "/", name: "Home", icon: House },
   { id: 2, route: "/all-books", name: "All Books", icon: BookOpen },
   { id: 3, route: "/add-book", name: "Add Book", icon: BookDown },
+  { id: 4, route: "/borrow-summary", name: "Borrow Summary", icon: BookDown },
 ];
 
 
