@@ -13,7 +13,6 @@ const Home = () => {
       <section>
         <OurBooks></OurBooks>
       </section>
-      <div className="h-[100vh] bg-red-500"> </div>
     </div>
   );
 };
