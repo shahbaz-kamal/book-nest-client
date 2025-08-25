@@ -19,6 +19,7 @@ import {
   TableRow,
 } from "../../components/ui/table";
 import { PencilOff, Trash, View } from "lucide-react";
+import { Link } from "react-router";
 
 const AllBooks = () => {
   const { data, isLoading, isError } = useGetAllBookQuery();
@@ -50,11 +51,11 @@ const AllBooks = () => {
       <header>
         <Heading title={"Our Book"} subtitle="Find Our latest books"></Heading>
       </header>
-      <section className="textlight-text dark:text-dark-text">
+      <section className="textlight-text dark:text-dark-text ">
         {/* catageory div */}
         {categories.length > 0 && (
           <Tabs defaultValue={categories[0] || "all"} className="w-full">
-            <TabsList className="w-full flex-wrap">
+            <TabsList className="w-full flex-wrap mb-3 md:mb-6">
               {categories.map((cat) => (
                 <TabsTrigger
                   onClick={() => setSelectedCategory(cat)}
@@ -101,13 +102,13 @@ const AllBooks = () => {
                     <TableRow>
                       <TableHead></TableHead>
                       <TableHead></TableHead>
-                      <TableHead>Title</TableHead>
-                      <TableHead>Author</TableHead>
-                      <TableHead>Genre</TableHead>
-                      <TableHead>ISBN</TableHead>
-                      <TableHead>Copies</TableHead>
-                      <TableHead>Availability</TableHead>
-                      <TableHead>Action</TableHead>
+                      <TableHead className="font-bold">Title</TableHead>
+                      <TableHead className="font-bold">Author</TableHead>
+                      <TableHead className="font-bold">Genre</TableHead>
+                      <TableHead className="font-bold">ISBN</TableHead>
+                      <TableHead className="font-bold">Copies</TableHead>
+                      <TableHead className="font-bold">Availability</TableHead>
+                      <TableHead className="font-bold">Action</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -142,17 +143,19 @@ const AllBooks = () => {
                           <TableCell className="">
                             <div className="flex gap-2">
                               <div className="relative group cursor-pointer transition ">
-                                <button className="px-2 py-1 text-sm bg-blue-500 hover:bg-blue-600  text-white rounded-md hover:opacity-80 hover:cursor-pointer">
-                                  <View />
-                                </button>
+                                <Link to={`/books/${book._id}`}>
+                                  <button className="px-2 py-1 text-sm bg-blue-500 hover:bg-blue-600  text-white rounded-md hover:opacity-80 hover:cursor-pointer">
+                                    <View />
+                                  </button>
+                                </Link>
                                 <p className="opacity-0 absolute group-hover:opacity-100 group-hover:cursor-pointer -top-6 font-bold text-light-color-text dark:text-dark-color-text bg-light-background dark:bg-dark-background">
                                   View
                                 </p>
                               </div>
                               <div className="relative group cursor-pointer transition ">
-                                <button className="px-2 py-1 text-sm bg-green-500 hover:bg-green-600  text-white rounded-md hover:opacity-80 hover:cursor-pointer ">
+                                <Link to={`/edit-book/${book._id}`}><button className="px-2 py-1 text-sm bg-green-500 hover:bg-green-600  text-white rounded-md hover:opacity-80 hover:cursor-pointer ">
                                   <PencilOff />
-                                </button>
+                                </button></Link>
                                 <p className="opacity-0 absolute group-hover:opacity-100 group-hover:cursor-pointer -top-6 font-bold text-light-color-text dark:text-dark-color-text bg-light-background dark:bg-dark-background">
                                   Details
                                 </p>
